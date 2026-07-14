@@ -1,0 +1,4 @@
+# gold_rm/adapter_model.safetensors весит 126 МБ — выше лимита GitHub в 100 МБ,
+# поэтому веса измерителей хранятся через Git LFS (входит в Git for Windows).
+*.safetensors filter=lfs diff=lfs merge=lfs -text
+*.ipynb text eol=lf

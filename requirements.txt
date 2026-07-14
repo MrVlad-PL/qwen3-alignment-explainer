@@ -1,0 +1,22 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# Версии зафиксированы жёстко: API у TRL менялось между релизами, а style_clf.pkl
+# сохранён именно из scikit-learn 1.7.2 (другая версия может не загрузить pickle).
+#
+# torch ставится ОТДЕЛЬНО, до этого файла, с CUDA-индекса — см. ЗАПУСК_WINDOWS.md:
+#   pip install torch==2.6.0 --index-url https://download.pytorch.org/whl/cu124
+# ─────────────────────────────────────────────────────────────────────────────
+
+transformers==4.56.1      # Qwen3 требует >=4.51
+trl==0.21.0               # SFTTrainer / DPOTrainer / RewardTrainer / CPOTrainer(SimPO)
+peft==0.17.1              # LoRA + мультиадаптерный reference для DPO
+bitsandbytes==0.47.0      # 4-bit NF4 (QLoRA); есть официальные колёса под Windows
+accelerate==1.10.1
+datasets==3.6.0
+
+scikit-learn==1.7.2       # ← обязательно эта: ей сохранён style_clf.pkl
+scipy>=1.11
+numpy>=1.26,<3
+
+safetensors>=0.4.5
+ipykernel                 # чтобы venv был виден как ядро в Jupyter/VS Code
+jupyter
