@@ -1,0 +1,24 @@
+{
+  "seed": 42,
+  "model": "Qwen/Qwen3-4B-Instruct-2507",
+  "gpu": "NVIDIA GeForce RTX",
+  "greedy": true,
+  "task1_sft_p_simple": 0.9785,
+  "task2_dpo_style_p_simple": 0.9975,
+  "task3_rm_pairwise_acc": 1.0,
+  "task4_dpo_quality_implicit_acc": 0.98,
+  "task5_simpo_implicit_acc": 1.0,
+  "answers": {
+    "task1": "Г",
+    "task2": "Г",
+    "task3": "Г",
+    "task4": "Г",
+    "task5": "Г"
+  },
+  "reference_points": {
+    "base_model_p_simple": 0.2104,
+    "implicit_acc_before_quality_stage": 0.98,
+    "length_baseline_for_rm": 0.5,
+    "gold_rm_acc": 1.0
+  }
+}
